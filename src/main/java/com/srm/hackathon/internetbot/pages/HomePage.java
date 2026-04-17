@@ -11,4 +11,11 @@ public class HomePage extends BasePage {
         click(formAuthLink);
         return new LoginPage();
     }
+    
+    private By jsAlertLink = By.xpath("//a[@href='/javascript_alerts']");
+
+    public AlertPage goToAlertsPage() {
+        click(jsAlertLink);
+        return new AlertPage();
+    }
 }

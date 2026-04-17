@@ -8,55 +8,14 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">InternetBot Suite</th></tr>
-<tr><td><a href="#t0">All Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">35,476</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">34,273</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">InternetBot Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.srm.hackathon.internetbot.tests.LoginTest</td><td><a href="#m0">testInvalidLogin</a></td><td rowspan="1">1776413737432</td><td rowspan="1">2804</td></tr><tr class="failedeven"><td><a href="#m1">testLogoutMessage</a></td><td rowspan="1">1776413752874</td><td rowspan="1">10126</td></tr><tr class="failedeven"><td><a href="#m2">testValidLogin</a></td><td rowspan="1">1776413752541</td><td rowspan="1">10299</td></tr><tr><th colspan="4">All Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.srm.hackathon.internetbot.tests.LoginTest</td><td><a href="#m3">testLogoutRedirect</a></td><td rowspan="1">1776413752212</td><td rowspan="1">4032</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.srm.hackathon.internetbot.tests.AlertTest</td><td><a href="#m0">testJSAlertAccept</a></td><td rowspan="1">1776415141871</td><td rowspan="1">599</td></tr><tr class="passedeven"><td><a href="#m1">testJSConfirmDismiss</a></td><td rowspan="1">1776415149979</td><td rowspan="1">1327</td></tr><tr class="passedeven"><td><a href="#m2">testJSPromptInput</a></td><td rowspan="1">1776415153144</td><td rowspan="1">11532</td></tr><tr class="passedeven"><td><a href="#m3">testResultClearsBetweenAlerts</a></td><td rowspan="1">1776415169553</td><td rowspan="1">648</td></tr></tbody>
 </table>
-<h2>All Tests</h2><h3 id="m0">com.srm.hackathon.internetbot.tests.LoginTest#testInvalidLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [false] but found [true]
-	at com.srm.hackathon.internetbot.tests.LoginTest.testInvalidLogin(LoginTest.java:38)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.srm.hackathon.internetbot.tests.LoginTest#testLogoutMessage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/login&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.101, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\PROGRA~1\KMSpico\temp\sc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57702}, goog:processID: 17508, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57702/devtoo..., se:cdpVersion: 147.0.7727.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e737729580827aad6230590a04fee5bf
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.srm.hackathon.internetbot.base.BasePage.waitForElementClickable(BasePage.java:30)
-	at com.srm.hackathon.internetbot.base.BasePage.click(BasePage.java:40)
-	at com.srm.hackathon.internetbot.pages.HomePage.goToLoginPage(HomePage.java:11)
-	at com.srm.hackathon.internetbot.tests.LoginTest.testLogoutMessage(LoginTest.java:46)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.srm.hackathon.internetbot.tests.LoginTest#testValidLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/login&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.101, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\PROGRA~1\KMSpico\temp\sc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57699}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57699/devtoo..., se:cdpVersion: 147.0.7727.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e69c61babf3cc47789c67c39e053534a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.srm.hackathon.internetbot.base.BasePage.waitForElementClickable(BasePage.java:30)
-	at com.srm.hackathon.internetbot.base.BasePage.click(BasePage.java:40)
-	at com.srm.hackathon.internetbot.pages.HomePage.goToLoginPage(HomePage.java:11)
-	at com.srm.hackathon.internetbot.tests.LoginTest.testValidLogin(LoginTest.java:17)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.srm.hackathon.internetbot.tests.LoginTest#testLogoutRedirect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.srm.hackathon.internetbot.tests.AlertTest#testJSAlertAccept</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.srm.hackathon.internetbot.tests.AlertTest#testJSConfirmDismiss</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.srm.hackathon.internetbot.tests.AlertTest#testJSPromptInput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.srm.hackathon.internetbot.tests.AlertTest#testResultClearsBetweenAlerts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

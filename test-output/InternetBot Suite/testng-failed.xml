@@ -8,11 +8,9 @@
     <classes>
       <class name="com.srm.hackathon.internetbot.tests.LoginTest">
         <methods>
-          <include name="testValidLogin"/>
           <include name="testInvalidLogin"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testLogoutMessage"/>
         </methods>
       </class> <!-- com.srm.hackathon.internetbot.tests.LoginTest -->
     </classes>
