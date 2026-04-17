@@ -10,6 +10,7 @@ public class HomePage extends BasePage {
 	private By formAuthLink = By.xpath("//a[@href='/login']");
 	private By jsAlertLink = By.xpath("//a[@href='/javascript_alerts']");
 	private By uploadLink = By.xpath("//a[@href='/upload']");
+	private By dynamicLink = By.xpath("//a[@href='/dynamic_loading']");
 
     
 
@@ -36,5 +37,10 @@ public class HomePage extends BasePage {
     public UploadPage goToUploadPage() {
         click(uploadLink);
         return new UploadPage();
+    }
+    
+    public DynamicPage goToDynamicPage() {
+        click(dynamicLink);
+        return new DynamicPage();
     }
 }

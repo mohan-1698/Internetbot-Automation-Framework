@@ -20,7 +20,7 @@ public class BaseTest {
 
         driver = DriverManager.getDriver();
 
-        // ✅ FIX: Always start from homepage
+        // ✅ THIS IS THE FIX
         driver.get(ConfigReader.getProperty("baseUrl"));
     }
 

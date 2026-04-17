@@ -41,5 +41,12 @@
             <class name="com.srm.hackathon.internetbot.tests.UploadTest"/>
         </classes>
     </test>
+    
+    <!-- Dynamic Module -->
+    <test name="Dynamic Tests">
+    <classes>
+        <class name="com.srm.hackathon.internetbot.tests.DynamicTest"/>
+    </classes>
+</test>
 
 </suite>

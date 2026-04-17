@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="methods" name="Failed suite [InternetBot Suite]" guice-stage="DEVELOPMENT">
+<suite parallel="tests" name="Failed suite [InternetBot Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.srm.hackathon.internetbot.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="methods" name="All Tests(failed)">
+  <test thread-count="5" parallel="tests" name="Dropdown Tests(failed)">
     <classes>
-      <class name="com.srm.hackathon.internetbot.tests.LoginTest">
+      <class name="com.srm.hackathon.internetbot.tests.DropdownTest">
         <methods>
-          <include name="testInvalidLogin"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testSelectOption1"/>
         </methods>
-      </class> <!-- com.srm.hackathon.internetbot.tests.LoginTest -->
+      </class> <!-- com.srm.hackathon.internetbot.tests.DropdownTest -->
     </classes>
-  </test> <!-- All Tests(failed) -->
+  </test> <!-- Dropdown Tests(failed) -->
 </suite> <!-- Failed suite [InternetBot Suite] -->
