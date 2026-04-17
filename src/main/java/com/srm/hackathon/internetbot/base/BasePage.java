@@ -91,7 +91,7 @@ public class BasePage {
         driver.get(url);
     }
 
-    protected String getTitle() {
+    public String getTitle() {
         return driver.getTitle();
     }
 

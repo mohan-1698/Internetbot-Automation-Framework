@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="InternetBot Suite" parallel="methods" thread-count="5">
+<suite name="InternetBot Suite" parallel="tests" thread-count="5">
 
     <listeners>
         <listener class-name="com.srm.hackathon.internetbot.listeners.TestListener"/>
     </listeners>
 
-    <test name="All Tests">
+    <!-- Authentication Module -->
+    <test name="Login Tests">
         <classes>
             <class name="com.srm.hackathon.internetbot.tests.LoginTest"/>
-            <!-- Add more test classes here -->
+        </classes>
+    </test>
+
+    <!-- Alerts Module -->
+    <test name="Alert Tests">
+        <classes>
+            <class name="com.srm.hackathon.internetbot.tests.AlertTest"/>
+        </classes>
+    </test>
+
+    <!-- Checkbox Module -->
+    <test name="Checkbox Tests">
+        <classes>
+            <class name="com.srm.hackathon.internetbot.tests.CheckboxTest"/>
+        </classes>
+    </test>
+
+    <!-- Dropdown Module -->
+    <test name="Dropdown Tests">
+        <classes>
+            <class name="com.srm.hackathon.internetbot.tests.DropdownTest"/>
+        </classes>
+    </test>
+
+    <!-- Upload Module (ADD THIS) -->
+    <test name="Upload Tests">
+        <classes>
+            <class name="com.srm.hackathon.internetbot.tests.UploadTest"/>
         </classes>
     </test>
 
