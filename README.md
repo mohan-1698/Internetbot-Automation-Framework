@@ -47,69 +47,118 @@ This framework automates testing for key web application features including:
 ```
 internetbot-automation/
 │
-├── pom.xml                          # Maven configuration file (dependencies, build config)
-├── testng.xml                       # TestNG suite configuration (test execution setup)
-├── README.md                        # Project documentation
+├── pom.xml                                         # Maven configuration & dependencies
+├── testng.xml                                      # TestNG suite configuration
+├── README.md                                       # Project documentation
+├── .gitignore                                      # Git ignore rules
 │
 ├── src/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/srm/hackathon/internetbot/
+│   │   │       ├── base/
+│   │   │       │   └── BasePage.java               # Base page class for page objects
+│   │   │       │
 │   │   │       ├── factory/
+│   │   │       │   ├── DriverFactory.java          # Driver factory pattern
 │   │   │       │   └── DriverManager.java          # WebDriver instance management
-│   │   │       ├── utils/
-│   │   │       │   ├── ConfigReader.java           # Read configuration properties
-│   │   │       │   ├── ScreenshotUtil.java         # Screenshot capture utility
-│   │   │       │   └── ExtentManager.java          # Extent Reports configuration
-│   │   │       └── listeners/
-│   │   │           └── TestListener.java           # TestNG listener for test events
+│   │   │       │
+│   │   │       ├── pages/
+│   │   │       │   ├── LoginPage.java              # Login page object model
+│   │   │       │   ├── HomePage.java               # Home page object model
+│   │   │       │   ├── AlertPage.java              # Alert handling page object
+│   │   │       │   ├── CheckboxPage.java           # Checkbox interactions page object
+│   │   │       │   ├── DropdownPage.java           # Dropdown selections page object
+│   │   │       │   ├── UploadPage.java             # File upload page object
+│   │   │       │   ├── DynamicPage.java            # Dynamic elements page object
+│   │   │       │   └── SecureAreaPage.java         # Secure area page object
+│   │   │       │
+│   │   │       └── utils/
+│   │   │           ├── ConfigReader.java           # Read configuration properties
+│   │   │           ├── ScreenshotUtil.java         # Screenshot capture utility
+│   │   │           └── ExtentManager.java          # Extent Reports configuration
 │   │   │
 │   │   └── resources/
-│   │       ├── config.properties                   # Application configuration
-│   │       ├── test-data.xlsx                      # Test data in Excel format
-│   │       └── log4j.properties                    # Logging configuration
+│   │       └── config.properties                   # Application configuration
 │   │
 │   └── test/
 │       ├── java/
 │       │   └── com/srm/hackathon/internetbot/
-│       │       ├── tests/
-│       │       │   ├── LoginTest.java              # Authentication tests
-│       │       │   ├── AlertTest.java              # Alert handling tests
-│       │       │   ├── CheckboxTest.java           # Checkbox interaction tests
-│       │       │   ├── DropdownTest.java           # Dropdown selection tests
-│       │       │   ├── UploadTest.java             # File upload tests
-│       │       │   └── DynamicTest.java            # Dynamic element tests
-│       │       ├── pages/
-│       │       │   ├── LoginPage.java              # Login page object model
-│       │       │   ├── AlertPage.java              # Alert page object model
-│       │       │   ├── CheckboxPage.java           # Checkbox page object model
-│       │       │   ├── DropdownPage.java           # Dropdown page object model
-│       │       │   ├── UploadPage.java             # Upload page object model
-│       │       │   └── DynamicPage.java            # Dynamic element page object model
-│       │       └── base/
-│       │           └── BaseTest.java               # Base test class with setup/teardown
+│       │       ├── base/
+│       │       │   └── BaseTest.java               # Base test class (setup/teardown)
+│       │       │
+│       │       ├── listeners/
+│       │       │   └── TestListener.java           # TestNG listener for test events
+│       │       │
+│       │       └── tests/
+│       │           ├── LoginTest.java              # Authentication & login tests
+│       │           ├── AlertTest.java              # Alert handling tests
+│       │           ├── CheckboxTest.java           # Checkbox interaction tests
+│       │           ├── DropdownTest.java           # Dropdown selection tests
+│       │           ├── UploadTest.java             # File upload tests
+│       │           └── DynamicTest.java            # Dynamic element tests
 │       │
 │       └── resources/
-│           └── test-data.xlsx                      # Test data files
+│           └── testdata/
+│               ├── sample.txt                      # Sample test data file
+│               └── sample.bat                      # Sample batch file
 │
 ├── reports/
-│   └── extent-report.html                          # HTML test report (generated after test run)
+│   └── extent-report.html                          # Extent HTML report (generated)
 │
 ├── screenshots/
-│   └── *.png                                       # Screenshot captures on failures
+│   ├── testInvalidLogin_20_20260417_134540.png     # Test failure screenshots
+│   └── testSelectOption1_24_20260417_152145.png    # Test failure screenshots
 │
-├── test-output/
-│   ├── index.html                                  # TestNG report (auto-generated)
-│   └── emailable-report.html                       # Emailable test report
+├── test-output/                                    # TestNG generated reports
+│   ├── index.html                                  # Main TestNG report
+│   ├── emailable-report.html                       # Emailable test report
+│   ├── testng-failed.xml                           # Failed tests XML
+│   ├── testng-results.xml                          # Test results XML
+│   ├── testng-reports.css                          # Report styling
+│   ├── testng-reports.js                           # Report scripts
+│   ├── testng-reports1.css                         # Additional styling
+│   ├── testng-reports2.js                          # Additional scripts
+│   │
+│   ├── Default suite/                              # Default suite reports
+│   │   └── Default test.html & .xml
+│   │
+│   ├── InternetBot Suite/                          # Custom suite reports
+│   │   ├── Alert Tests.html & .xml
+│   │   ├── Checkbox Tests.html & .xml
+│   │   ├── Dropdown Tests.html & .xml
+│   │   ├── Dynamic Tests.html & .xml
+│   │   ├── Login Tests.html & .xml
+│   │   ├── Upload Tests.html & .xml
+│   │   ├── All Tests.html & .xml
+│   │   └── testng-failed.xml
+│   │
+│   ├── junitreports/                               # JUnit format reports
+│   │   └── TEST-*.xml (for each test class)
+│   │
+│   └── (other report assets: images, scripts)
 │
-├── target/
-│   ├── classes/                                    # Compiled main classes
-│   ├── test-classes/                               # Compiled test classes
-│   └── ...                                         # Other build artifacts
-│
-├── .project                                        # Eclipse project file
-├── .classpath                                      # Eclipse classpath
-└── .gitignore                                      # Git ignore rules
+├── target/                                         # Build output directory
+│   ├── classes/
+│   │   ├── config.properties                       # Compiled config
+│   │   ├── com/srm/hackathon/internetbot/          # Compiled main classes
+│   │   └── META-INF/                               # Maven metadata
+│   │
+│   ├── test-classes/
+│   │   ├── com/srm/hackathon/internetbot/          # Compiled test classes
+│   │   └── testdata/                               # Test data resources
+│   │
+│   ├── generated-sources/annotations/              # Generated annotation sources
+│   ├── generated-test-sources/test-annotations/    # Generated test annotation sources
+│   │
+│   ├── maven-status/                               # Maven compiler status
+│   │   └── maven-compiler-plugin/
+│   │       ├── compile/
+│   │       └── testCompile/
+│   │
+│   └── surefire-reports/                           # Surefire test reports
+│       ├── TEST-*.xml (each test class)
+│       └── (HTML reports & assets)
 ```
 
 ---
